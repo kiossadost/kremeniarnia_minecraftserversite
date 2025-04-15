@@ -19,7 +19,6 @@
         padding: 20px;
       }
 
-      /* Фонове зображення з розмиттям для заголовка */
       header {
         position: relative;
         color: white;
@@ -97,6 +96,9 @@
         padding: 15px;
         font-size: 1.3em;
         font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .card-body {
@@ -189,12 +191,57 @@
         font-weight: bold;
       }
 
+      .download-button {
+        display: inline-block;
+        background-color: #27ae60;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 15px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .download-button:hover {
+        background-color: #2ecc71;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .download-button i {
+        margin-right: 8px;
+      }
+
+      .header-button {
+        display: inline-block;
+        background-color: #2ecc71;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.8em;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .header-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
       @media (max-width: 768px) {
         .grid {
           grid-template-columns: 1fr;
         }
         .full-width {
           grid-column: 1;
+        }
+        .card-header {
+          flex-direction: column;
+          gap: 10px;
         }
       }
     </style>
@@ -269,8 +316,17 @@
           <div class="card-body">
             <ol>
               <li>
-                Завантажте архів "mods.zip". Розархівуйте zip файл у будь-яку
-                вашу папку.
+                Завантажте архів "mods.zip" за посиланням нижче. Розархівуйте
+                zip файл у будь-яку вашу папку.
+                <div style="text-align: center">
+                  <a
+                    href="https://drive.google.com/file/d/1oLg7bqZQKFvFYSMcJq4_O0hZKL98vPqg/view?usp=sharing"
+                    class="download-button"
+                    target="_blank"
+                  >
+                    📥 Завантажити mods.zip
+                  </a>
+                </div>
               </li>
               <li>Натисніть на клавіатурі WIN+R, впишіть у пошук %appdata%.</li>
               <li>Знайдіть та відкрийте папку .minecraft.</li>
@@ -293,9 +349,18 @@
           </div>
         </div>
 
-        <!-- Третій блок на всю ширину під першими двома -->
+        <!-- Третій блок -->
         <div class="card full-width">
-          <div class="card-header">Додаткові покращення (необов'язково)</div>
+          <div class="card-header">
+            Додаткові покращення (необов'язково)
+            <a
+              href="https://drive.google.com/drive/folders/1sHdqoO7p7Og1m7bebm_bPc9iwszqBO-0?usp=sharing"
+              class="header-button"
+              target="_blank"
+            >
+              📥 Завантажити покращення
+            </a>
+          </div>
           <div class="card-body">
             <p>
               Якщо у вас середній або потужний ПК і ви хочете, щоб гра виглядала
